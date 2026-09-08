@@ -428,7 +428,7 @@ GameObject:
   - component: {fileID: 894925237}
   - component: {fileID: 894925236}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Canvas_FinalCredits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -639,8 +639,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -1580.1}
-  m_SizeDelta: {x: 981.02, y: 2440.18}
+  m_AnchoredPosition: {x: 0, y: -906.69}
+  m_SizeDelta: {x: 981.02, y: 1093.37}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1566962957
 MonoBehaviour:
@@ -662,14 +662,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Cr\xE9ditos Finais\r\n\r\nDesenvolvedores Principais:\r\nJuan \r\nPedro\r\nDavi\r\n\r\nDesigners:\r\nPedro\r\n\r\nEscritores:\r\nPietro\r\n\r\nCompositores
-    e M\xFAsicos:\r\nSnudio_Records\r\nEilasSFX\r\nnuFF3\r\nGameAudio\r\nnotyermom\r\nAtomic-Potato\r\najanhallinta\r\nVOiD1
-    Gaming\r\nKevin Fowler\r\nAtomic-Potato\r\nRobinhood76\r\nopticaillusions\r\n\r\nTestadores:\r\nJuan\r\nPedro\r\nDavi\r\nPietro\r\n\r\nAssets:\r\nBDragon1727\r\nLuck
-    \r\nCraftpix\r\nAnokolisa\r\nAnsimuz\r\nViergacht\r\n\r\nAgradecimentos Especiais:\r\nAo
-    canal Farmando XP por promover a Game Jam.\r\n\xC0 Agilize, empresa que agiliza
-    os processos da sua empresa, pelo patroc\xEDnio.\r\n\r\nLicenciamento e Cr\xE9ditos
-    de Terceiros:\r\nUnity (https://unity.com/)\r\nFreesound (https://freesound.org/)\r\nitch.io
-    (https://itch.io/)"
+  m_text: "Cr\xE9ditos Finais\r\n\r\nDesenvolvedores Principais:\r\n\nDesigners:\r\n\r\nEscritores:\r\n\r\nCompositores
+    e M\xFAsicos:\r\n\nTestadores:\r\n\nAssets:\r\n\r\nAgradecimentos Especiais:\r\n\nLicenciamento
+    e Cr\xE9ditos de Terceiros:\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

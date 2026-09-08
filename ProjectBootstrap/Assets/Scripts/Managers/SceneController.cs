@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -18,13 +17,13 @@ public class SceneController : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-    public void NextLevel(int index)
+    public void LoadLevel(int index)
     {
         if (!isLoading)
-            StartCoroutine(LoadLevel(index));
+            StartCoroutine(LoadLevelAsync(index));
     }
 
-    IEnumerator LoadLevel(int index)
+    IEnumerator LoadLevelAsync(int index)
     {
         isLoading = true;
         anim.SetTrigger("End");

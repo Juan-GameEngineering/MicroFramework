@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
-using UnityEngine.Rendering;
 
 public class AudioManager : MonoBehaviour
 {
@@ -13,7 +10,6 @@ public class AudioManager : MonoBehaviour
 
     [SerializeField] AudioSource song;
     [SerializeField] AudioSource sfx;
-
 
 
     private void Awake()
@@ -32,16 +28,16 @@ public class AudioManager : MonoBehaviour
         if (PlayerPrefs.GetInt("FirstStart") != 1)
         {
             SetMasterVolume(1f);
-            SetSFXVolume(0.72f);
-            SetMusicVolume(0.6f);
+            SetSFXVolume(0.7f);
+            SetMusicVolume(0.5f);
 
             PlayerPrefs.SetInt("FirstStart", 1);
         }
         else
         {
-            audioMixer.SetFloat("MasterVolume", 60 * Mathf.Log10(Mathf.Max(PlayerPrefs.GetFloat("Master"), 0.05f)));
-            audioMixer.SetFloat("SFXVolume", 60 * Mathf.Log10(Mathf.Max(PlayerPrefs.GetFloat("Sfx"), 0.05f)));
-            audioMixer.SetFloat("SongVolume", 60 * Mathf.Log10(Mathf.Max(PlayerPrefs.GetFloat("Song"), 0.05f)));
+            audioMixer.SetFloat("Master", 60 * Mathf.Log10(Mathf.Max(PlayerPrefs.GetFloat("MasterVolume"), 0.05f)));
+            audioMixer.SetFloat("SFX", 60 * Mathf.Log10(Mathf.Max(PlayerPrefs.GetFloat("SfxVolume"), 0.05f)));
+            audioMixer.SetFloat("Song", 60 * Mathf.Log10(Mathf.Max(PlayerPrefs.GetFloat("SongVolume"), 0.05f)));
         }
     }
 
@@ -73,22 +69,21 @@ public class AudioManager : MonoBehaviour
     public void SetMasterVolume(float value)
     {
         float volumeDB = 60 * Mathf.Log10(Mathf.Max(value, 0.05f));
-        audioMixer.SetFloat("MasterVolume", volumeDB);
-        PlayerPrefs.SetFloat("Master", value);
+        audioMixer.SetFloat("Master", volumeDB);
+        PlayerPrefs.SetFloat("MasterVolume", value);
     }
 
     public void SetSFXVolume(float value)
     {
         float volumeDB = 60 * Mathf.Log10(Mathf.Max(value, 0.05f));
-        audioMixer.SetFloat("SFXVolume", volumeDB);
-        PlayerPrefs.SetFloat("Sfx", value);
+        audioMixer.SetFloat("SFX", volumeDB);
+        PlayerPrefs.SetFloat("SFXVolume", value);
     }
 
     public void SetMusicVolume(float value)
     {
-
         float volumeDB = 60 * Mathf.Log10(Mathf.Max(value, 0.05f));
-        audioMixer.SetFloat("SongVolume", volumeDB);
-        PlayerPrefs.SetFloat("Song", value);
+        audioMixer.SetFloat("Song", volumeDB);
+        PlayerPrefs.SetFloat("SongVolume", value);
     }
 }

@@ -17,9 +17,9 @@ public class UI_AudioController : MonoBehaviour
 
     public void UpdateSliders()
     {
-        sliderMaster.value = PlayerPrefs.GetFloat("Master");
-        sliderSFX.value = PlayerPrefs.GetFloat("Sfx");
-        sliderSong.value = PlayerPrefs.GetFloat("Song");
+        sliderMaster.value = PlayerPrefs.GetFloat("MasterVolume");
+        sliderSFX.value = PlayerPrefs.GetFloat("SFXVolume");
+        sliderSong.value = PlayerPrefs.GetFloat("SongVolume");
     }
 
     public void UpdateSongVolume(float vol)

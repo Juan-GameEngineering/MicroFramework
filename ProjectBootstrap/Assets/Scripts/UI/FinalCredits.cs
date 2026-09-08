@@ -1,8 +1,6 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FinalCredits : MonoBehaviour
 {
@@ -14,7 +12,6 @@ public class FinalCredits : MonoBehaviour
     [SerializeField] private GameObject obj_txt;
     [SerializeField] private GameObject lastMessage;
 
-
     private float posY;
     private bool canDone;
 
@@ -25,9 +22,8 @@ public class FinalCredits : MonoBehaviour
         posY = obj_txt.transform.position.y;
         lastMessage.SetActive(false);
 
-        AudioManager.instance.PlaySong(aud_finalCredits, true);
+        /*AudioManager.instance.PlaySong(aud_finalCredits, true);*/
     }
-
 
     void Update()
     {
@@ -55,7 +51,10 @@ public class FinalCredits : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         lastMessage.SetActive(true);
         yield return new WaitForSeconds(durationTimeTxtOnScreen);
-        /*SceneController.instance.NextLevel(0);*/
-    }
 
+        if (SceneController.instance != null)
+            SceneController.instance.LoadLevel(0);
+        else
+            SceneManager.LoadScene(0);
+    }
 }
